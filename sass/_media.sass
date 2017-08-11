@@ -1,0 +1,313 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1250px)
+	.sc-header__text
+		padding: 0 60px
+	.ft-content__item--main-item
+		max-width: 100%
+	.ft-content__item--blogs
+		max-width: 50%
+	.ft-content__item--instagram
+		max-width: 50%
+		text-align: center
+		margin: auto
+	.ft-instagram__images
+		max-width: 270px
+	.ft-item__logo
+		text-align: center
+	.inline-content__inline-item
+		padding: 20px 0
+	
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.top-line__icons
+		margin-right: 20px
+	.awards
+		flex-grow: 3
+	.hd-slider-nav__item
+		font-size: 14px
+		strong
+			font-size: 16px
+	.cd-primary-nav
+		display: none
+		position: absolute
+		right: 10px
+		top: 80px
+		width: 20%
+		z-index: 10
+	.nav__link
+		margin: 15px 0
+		display: block
+
+	.nav-trigger
+		display: block
+	.hd-content
+		padding: 0!important
+	.ft-content
+		padding-bottom: 0 !important
+	.sc-header__text
+		padding: 0 20px
+	.sc-content
+		padding: 50px 0
+		&__main-content
+			margin-top: 40px
+	.review-item__image--lg-image
+		flex: 0 0 150px
+	.item-subheading--lg-text
+		font-size: 14px
+		line-height: 1.5em
+	.reviews__item--md-item
+		max-width: 100%
+		margin-top: 20px
+		&:nth-child(1)
+			margin-top: 20px
+		&:nth-child(2)
+			margin-top: 20px
+	.overlay-content__link	
+		font-size: 15px
+	.item__text
+		font-size: 14px
+	.inline-item__heading
+		font-size: 40px
+		&--lg-txt
+			font-size: 60px
+	.inline-item__subheading
+		font-size: 10px
+		&--lg-txt
+			font-size: 20px
+	.reviews__item--sm-item
+		max-width: 50%
+		&:nth-child(4)
+			border-bottom: 1px solid #e5e5e5
+	.inline-content__inline-item--logo
+		min-width: 33%
+	
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.image--overlay
+		&:hover
+			transform: none
+			.image__overlay-content
+				display: block
+			&::before
+				background: transparent
+				box-shadow: none
+	.overlay-content__icon
+		display: none
+	.overlay-content__link
+		position: absolute
+		color: $black !important
+		bottom: -30px
+		left: 0
+		width: 100%
+		text-align: center
+		font-size: 12px
+	.image__overlay-content
+		display: block
+	.awards
+		flex-grow: 2
+		flex-basis: 100%
+		order: -1
+	.inline-content__inline-item
+		min-width: 50%
+		&--bordered
+			border: none
+			&:last-child
+				border: none
+	.reviews__item--sm-item
+		width: 100%
+		max-width: 100%
+		&:nth-child(5)
+			border-bottom: 1px solid #e5e5e5
+	.uniquedesign
+		display: none
+	.whatwedo
+		margin-top: -80px
+	.tabs
+		flex-direction: column
+	.tabs__image
+		height: 0
+		overflow: hidden
+	.tabs__content
+		margin-left: 0
+	.icon--lg-icon
+		display: none
+	.review-item__image--lg-image
+		display: none
+	.owl-prev, .owl-next
+		padding-left: 0
+		padding-right: 0
+		&::before
+			font-size: 25px
+	.carousel
+		padding: 0 30px
+	.reviews__item--lg-item
+		padding: 20px 0
+	.overlay-content__social
+		position: absolute
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		flex-direction: row
+		width: 100%
+		justify-content: space-around
+		left: 0
+		bottom: 2px
+	.overlay__social-icon
+		background: rgba(#f38181, .7)
+		color: $white !important
+		width: 100%
+	.main-content__images--md-column
+		flex-direction: column
+	.images__item--md-column
+		position: relative
+		margin-top: 100px
+	.description--photo
+		position: absolute
+		top: -90px
+		width: 100%
+		text-align: center
+	.gallery-content__column
+		width: 50%
+	.image__overlay-content--gallery
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		position: absolute
+		width: 100%
+		height: auto
+		top: auto
+		left: 0
+		bottom: 0
+		padding: 10px 0
+		text-align: center
+		+background(linear-gradient(rgba($red, .9), rgba(#fce38a, .9)) left repeat)
+	.gallery-content__item
+		&:hover
+			transform: none
+			&::before
+				background: none
+	.overlay-content__link--gallery
+		font-size: 10px
+		margin: 0
+	.overlay-content__subheading
+		font-size: 10px
+		margin: 0
+	.images__item--with-date
+		min-width: 100%
+		margin-bottom: 50px
+		&:last-child
+			margin-bottom: 0
+	.ft-content__item--instagram,
+	.ft-content__item--blogs
+		min-width: 100%	
+	.ft-instagram__images
+		max-width: 100%
+	.ft-instagram-images__image
+		width: 33%
+	.item-icons
+		display: block
+		text-align: center
+	.item-subheading--xs-center-txt
+		display: block
+		text-align: center
+
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.hd-headers__heading
+		font-size: 40px !important
+	.hd-headers__subheading
+		font-size: 20px !important
+	.cd-primary-nav
+		width: calc(100% + 50px)
+		right: 50%
+		transform: translate(50%)
+		text-align: center
+		color: $black
+		text-shadow: 0 0 20px $black
+		+linear-gradient(transparent, #fce38a)
+	.hd-slider__progress-bar
+		height: 10px
+	.hd-slider-nav__item
+		font-size: 12px
+		strong
+			display: none
+	.heading
+		font-size: 20px
+	.subheading
+		font-size: 20px
+	.overlay-content__link
+		font-size: 15px
+		bottom: auto
+		top: -30px
+	.review-item__image
+		display: none
+	.item-heading
+		text-align: center
+	.inline-item__heading
+		font-size: 30px
+		&--lg-txt
+			font-size: 60px
+	.carousel
+		padding: 0
+	.main-content__images--xs-column
+		flex-direction: column
+	.images__item--xs-column
+		margin-top: 60px
+		box-sizing: border-box
+		&:first-child
+			margin-top: 40px
+	.subheading
+		font-size: 20px
+	.gallery-content__column
+		width: 100%
+	.form__button
+		width: 100%
+		padding: 0
+	.form__email
+		margin-bottom: 10px
+		width: 100%
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	.nav-trigger
+		display: none
+	.cd-primary-nav
+		display: block !important
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

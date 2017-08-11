@@ -7,15 +7,15 @@
 	.sc-header__text
 		padding: 0 60px
 	.ft-content__item--main-item
-		max-width: 100%
+		width: 100%
 	.ft-content__item--blogs
-		max-width: 50%
+		width: 60%
 	.ft-content__item--instagram
-		max-width: 50%
+
 		text-align: center
 		margin: auto
 	.ft-instagram__images
-		max-width: 270px
+		width: 270px
 	.ft-item__logo
 		text-align: center
 	.inline-content__inline-item
@@ -90,26 +90,6 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	.image--overlay
-		&:hover
-			transform: none
-			.image__overlay-content
-				display: block
-			&::before
-				background: transparent
-				box-shadow: none
-	.overlay-content__icon
-		display: none
-	.overlay-content__link
-		position: absolute
-		color: $black !important
-		bottom: -30px
-		left: 0
-		width: 100%
-		text-align: center
-		font-size: 12px
-	.image__overlay-content
-		display: block
 	.awards
 		flex-grow: 2
 		flex-basis: 100%
@@ -149,6 +129,26 @@
 		padding: 0 30px
 	.reviews__item--lg-item
 		padding: 20px 0
+	.image--overlay
+		&:hover
+			transform: none
+			.image__overlay-content
+				display: block
+			&::before
+				background: transparent
+				box-shadow: none
+	.overlay-content__icon
+		display: none
+	.overlay-content__link
+		position: absolute
+		color: $black !important
+		bottom: -30px
+		left: 0
+		width: 100%
+		text-align: center
+		font-size: 12px
+	.image__overlay-content
+		display: block
 	.overlay-content__social
 		position: absolute
 		display: -webkit-box
@@ -163,18 +163,6 @@
 		background: rgba(#f38181, .7)
 		color: $white !important
 		width: 100%
-	.main-content__images--md-column
-		flex-direction: column
-	.images__item--md-column
-		position: relative
-		margin-top: 100px
-	.description--photo
-		position: absolute
-		top: -90px
-		width: 100%
-		text-align: center
-	.gallery-content__column
-		width: 50%
 	.image__overlay-content--gallery
 		display: -webkit-box
 		display: -ms-flexbox
@@ -199,6 +187,18 @@
 	.overlay-content__subheading
 		font-size: 10px
 		margin: 0
+	.main-content__images--md-column
+		flex-direction: column
+	.images__item--md-column
+		position: relative
+		margin-top: 100px
+	.description--photo
+		position: absolute
+		top: -90px
+		width: 100%
+		text-align: center
+	.gallery-content__column
+		width: 50%
 	.images__item--with-date
 		min-width: 100%
 		margin-bottom: 50px
@@ -206,9 +206,9 @@
 			margin-bottom: 0
 	.ft-content__item--instagram,
 	.ft-content__item--blogs
-		min-width: 100%	
+		width: 100%	
 	.ft-instagram__images
-		max-width: 100%
+		width: 100%
 	.ft-instagram-images__image
 		width: 33%
 	.item-icons

@@ -1,0 +1,72 @@
+/* =========== DEFAULT CLASS STYLES =========== */
+
+.center-txt
+	text-align: center
+.border-bottom
+	border-bottom: 1px solid #e5e5e5
+.nomargin
+	margin: 0 !important
+.nopadding
+	padding: 0 !important
+	&-bottom
+		padding-bottom: 0 !important
+.green-clr
+	color: $green !important
+.green-bdr
+	border-color: $green !important
+.light-grey-bg
+	background-color: #f8f8f8
+.green-bg
+	background-color: $green
+
+.rounded
+	border-radius: 50%
+
+.subline
+	display: inline-block
+	height: 3px
+	width: 60px
+	background-color: $red
+	&--inline
+		margin: 0 5px 5px 0
+.text
+	font-family: $RobotoRegular
+	font-size: 15px
+	color: $grey
+.description
+	margin-top: 30px
+	max-width: 100%
+.hidden
+	display: none
+.owl-prev, .owl-next
+	position: absolute
+	height: 100%
+	width: 100px
+	top: 0
+	&::before
+		position: absolute
+		font-family: "FontAwesome"
+		font-size: 50px
+		color: #cccccc
+		top: 50%
+		transform: translate(0, -50%)
+	&:hover
+		&::before
+			color: darken(#ccc, 20%)
+
+.carousel
+	padding: 0 100px		
+.owl-prev
+	left: 0px
+	text-align: left
+	padding-left: 25px
+	&::before
+		content: "\f104"
+		
+
+.owl-next
+	right: 0
+	text-align: right
+	padding-right: 25px
+	&::before
+		content: "\f105"

@@ -1,0 +1,530 @@
+/* =========== SECTION HEAD AND SUBHEAD =========== */
+
+.subheading
+	font-family: $KaushanscriptRegular
+	font-size: 24px
+	color: $black
+	margin: 0 0 8px
+	font-weight: normal
+	font-style: normal
+.heading
+	font-family: $MontserattBold
+	font-size: 30px
+	color: $black
+	text-transform: uppercase
+	margin: 0 0 15px
+	font-weight: normal
+
+/* =========== ITEM STYLES =========== */
+
+.item
+	&-heading
+		font-family: $MontserattRegular
+		font-size: 14px
+		color: $black
+		text-transform: uppercase
+		margin: 0 0 7px
+		font-weight: normal
+	&-subheading
+		font-family: $RobotoLightItalic
+		font-size: 15px
+		color: $grey
+		margin: 0
+		&--lg-text
+			font-size: 22px 
+			margin-bottom: 10px
+	&__text
+		margin-top: 0
+		padding-bottom: 20px
+	&-icons
+		font-size: 0
+		margin-left: 10px
+		&__icon
+			margin: 0 7px
+			i:hover
+				color: darken($green, 20%) !important
+.inline-item
+	&__heading
+		@extend .heading
+		color: $white
+		font-size: 72px
+		text-align: center
+		margin: 0
+	&__subheading
+		@extend .item-heading
+		color: $white
+		text-align: center
+		margin-bottom: 15px
+.date
+	position: absolute
+	width: 60px
+	height: 70px
+	background-color: $green
+	bottom: 10px
+	left: -10px
+	text-align: center
+	&__heading
+		@extend .heading
+		margin: 0
+		color: $white
+	&__subheading
+		@extend .item-subheading
+		margin: 0
+		color: $white
+
+
+/* =========== IMAGE OVERLAY STYLES =========== */
+.white-overlay
+	position: relative
+	&::before
+		content: ''
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		background-color: $white
+		opacity: .85
+.gradient-overlay
+	&::before
+		position: absolute
+		content: ''
+		height: 100%
+		width: 100%
+		+background(linear-gradient(rgba($red, .9), rgba(#fce38a, .9)) left repeat)
+		box-shadow: 10px 10px 0 $green
+.overlay-content
+		&__icon
+			font-size: 30px
+			margin-bottom: 5px
+		&__link
+			font-family: $MontserattBold
+			text-transform: uppercase
+			font-size: 18px
+			&:hover
+				text-decoration: underline
+			&--gallery
+				@extend .item-heading
+				margin: 5px 0
+				color: $white
+				&:hover
+					text-decoration: underline
+		&__subheading
+			@extend .item-subheading
+			color: $white !important
+		&__social
+			font-size: 0
+.overlay__social-icon
+	font-size: 25px
+	margin: .5px
+	display: inline-block
+	color: $red !important
+	height: 55px
+	width: 55px
+	line-height: 55px
+	background-color: #fce38a
+	&:hover
+		color: $white !important
+		background-color: $red
+
+/* =========== IMAGE STYLES =========== */
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&--gallery
+	width: 100%
+.image
+	position: relative
+	transition: all .2s ease
+	&__head-img
+		position: relative
+		&--tablet
+			width: 477px
+			height: 582px
+			margin: auto
+			transform: translate(-50px)
+	&__subhead-img
+		position: absolute
+		&--phone
+			bottom: -70px
+			right: -120px
+	&--overlay
+		&:hover
+			transform: translate(-10px, -10px)
+			@extend .gradient-overlay
+			.image__overlay-content
+				display: -webkit-box
+				display: -ms-flexbox
+				display: flex
+	&__overlay-content
+		display: none
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		color: $white
+.images
+	&__item	
+		flex: 0 1 32%	
+		&--with-date
+			max-width: 32%
+.icon
+	&--sm-icon
+		font-size: 17px
+	&--md-icon
+		font-size: 30px
+		min-width: 30px
+	&--lg-icon
+		font-size: 70px
+		height: 145px
+		width: 145px
+		line-height: 130px
+		display: inline-block
+		margin-right: 55px
+		flex: 0 0 145px
+	&--bordered
+		border: 3px solid
+
+/* =========== VIEWS, COMMENTS, QUOTES STYLES =========== */
+.reviews // block with reviews, comments or quotes
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+	&__item
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		&--sm-item
+			padding: 45px 25px
+			max-width: 33.33%
+			&:nth-child(1), &:nth-child(2), &:nth-child(3),
+				border-bottom: 1px solid #e5e5e5
+		&--md-item
+			padding: 65px 30px 0
+			box-sizing: border-box
+			max-width: 50%
+			&:nth-child(1),
+			&:nth-child(2)
+				margin-top: 0
+		&--lg-item
+			padding: 100px 0
+			align-items: center
+.review-item // review, comment or quote
+	&__image
+		margin-right: 25px
+		&--lg-image
+			margin-right: 55px
+			flex: 0 0 210px
+	&__content
+
+.views //block with views and comments
+	color: $green
+	margin-top: 10px
+	font-size: 15px
+	&__item
+		display: inline-block
+		margin-right: 10px
+		cursor: pointer
+		&:hover
+			a
+				color: darken($green, 20%) !important
+
+.tabs
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	justify-content: space-between 
+	&__content
+		flex: 0 0 50%
+		margin-left: 30px
+	&__image
+		display: none
+		&.active
+			display: block
+
+.tab
+	border: 1px solid #e5e5e5
+	margin-bottom: 10px
+	&__head
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		align-items: center
+		border-bottom: 1px solid #e5e5e5
+		padding: 15px 50px 15px 15px
+		position: relative
+		cursor: pointer
+	&.active
+		.tab-head__arrow
+			transform: rotate(180deg)
+			color: $black
+
+	&:hover
+		.tab-head__arrow
+			color: $black
+	&__text
+		@extend .item-subheading
+		padding: 15px 50px 15px 15px
+		max-height: 180px
+		display: none
+		overflow: auto
+.tab-head
+	&__arrow
+		position: absolute
+		right: 20px
+		top: 17px
+		color: #ccc
+		transition: all .2s ease
+		text-align: center
+	&__icon
+		margin-right: 15px
+	&__heading
+		@extend .item-heading
+		margin: 0
+
+/* =========== SECTION STYLES =========== */
+
+.sc-header
+	&__text
+		padding: 0 120px
+		position: relative
+		margin: 35px 0 0
+.sc-content
+	width: 90%
+	max-width: 1200px
+	margin: auto
+	padding: 100px 0
+	&__header
+		position: relative
+
+	&__main-content
+		margin-top: 90px
+		position: relative
+		&--small-margin
+			margin-top: 35px
+.main-content
+	&__images
+		display: -webkit-box
+		display: -ms-flexbox
+		display: flex
+		justify-content: space-between
+		position: relative
+.inline-content
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	&__inline-item
+		flex: 1 1 100px
+		padding: 60px 0
+		position: relative
+		&--bordered
+			border-left: 1px solid #b5eae0
+			&:last-child
+				border-right: 1px solid #b5eae0
+
+/* =========== FOOTER STYLES =========== */
+.ft-content
+	@extend .sc-content
+	@extend .inline-content
+	padding: 70px 0 0
+	&__item
+		&--main-item
+			width: 470px
+		&--blogs
+			width: 350px
+		&--instagram
+			width: 270px
+.ft-item
+	&__logo
+		@extend .heading
+		font-size: 46px
+		color: #ccc
+		text-transform: none
+		margin: 0
+	&__heading
+		@extend .item-heading
+		margin: 20px 0 40px
+	&__subheading
+		@extend .item-heading
+		text-transform: none
+		margin: 0
+		padding-bottom: 15px
+		strong
+			font-family: $MontserattBold
+			font-size: 18px
+			font-weight: normal
+	&__text
+		margin: 40px 0
+	&__social
+		line-height: 45px
+	&__form
+		margin-top: 15px
+.ft-reviews
+	@extend .reviews
+	flex-direction: column
+	&__item
+		@extend .reviews__item
+		align-items: center
+		margin-bottom: 30px
+.ft-reviews-item
+	&__image
+		margin-right: 15px
+
+.ft-review
+	&__heading
+		@extend .item-heading
+		color: $black !important
+		margin: 0
+		font-size: 12px
+		font-weight: normal
+		&:hover
+			text-decoration: underline
+	&__subheading
+		@extend .item-subheading
+		font-size: 13px
+		margin-top: 5px
+.ft-instagram__images
+	@extend .main-content__images
+	flex-wrap: wrap
+.ft-instagram-images__image
+	padding: 1px
+	width: 33.3%
+	box-sizing: border-box
+	img
+		transition: transform .2s ease
+		&:hover
+			transform: scale(1.1, 1.1)
+.ft-instagram__link
+	@extend .ft-review__subheading
+	display: block
+	color: rgba($black, .7) !important
+	margin-top: 15px
+	&:hover
+		text-decoration: underline
+.ft-underline
+	text-align: center
+	margin-top: 40px
+	padding: 20px 0
+	border-top: 1px solid #e5e5e5
+	&__link
+		color: $red !important
+		&:hover
+			text-decoration: underline
+
+/* =========== FOOTER FORM STYLES =========== */
+.form //footer form
+	vertical-align: middle
+	&__email
+		@extend .item-subheading
+		color: #ccc
+		padding: 0 10px
+		margin: 0
+		height: 40px
+		border: 1px solid #e7e7e7
+		border-right: none
+	&__button
+		@extend .heading
+		color: $white
+		background-color: $green
+		font-size: 14px
+		margin: 0
+		padding: 0 30px
+		height: 40px
+		border: none
+		&:hover
+			background-color: darken($green, 10%)
+
+/* ========== FORM PLACEHOLDER STYLES ==========*/			
+\::-webkit-input-placeholder
+	color: #ccc
+\::-moz-placeholder
+	color: #ccc
+\:-moz-placeholder
+	color: #ccc
+\:-ms-input-placeholder
+	color: #ccc
+
+/* =========== SPECIAL SECTION STYLES =========== */
+.uniquedesign
+	background: url(../img/s-uniqdesign/uniqdesign-bg.jpg) center
+.whatpeoplesay
+	background: url(../img/moutain-bg-2.jpg) top center
+.map
+	background: url(../img/s-map/s-map-bg.jpg) center
+	&-link
+		text-align: center
+		color: $red !important
+		padding: 55px 0
+		&:hover
+			.map-link__heading
+				text-decoration: underline
+		&__heading
+			@extend .heading
+			color: $red
+			margin: 0
+			font-size: 24px
+.gallery
+	&__content
+		@extend .reviews
+		flex-direction: row
+		justify-content: center
+.gallery-content
+	&__column
+		width: 25%
+	&__item
+		position: relative
+		transition: transform .2s ease
+		&:hover
+			@extend .gradient-overlay
+			&::before
+				box-shadow: none
+			transform: scale(1.05, 1.05)
+			z-index: 2
+			.image__overlay-content
+				display: -webkit-box
+				display: -ms-flexbox
+				display: flex
+
+
+/* =========== SCROLLBAR STYLES (only webkit supprot) =========== */
+
+\::-webkit-scrollbar-button
+	background-image: url('')
+	background-repeat: no-repeat
+	width: 5px
+	height: 20px
+	
+
+\::-webkit-scrollbar-track
+	background-color: #f5f5f5
+    
+
+\::-webkit-scrollbar-thumb
+	-webkit-border-radius: 3px
+	border-radius: 3px
+	background-color: $green
+	&:hover
+		background-color: #56999f
+
+
+\::-webkit-scrollbar
+	width: 5px
+
+
+
+
+
+
+
+
+	

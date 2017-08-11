@@ -1,4 +1,18 @@
 $(document).ready(function() {
+
+if ($(document).width() > 767) {
+	if(!!('ontouchstart' in window)){//check for touch device
+		$(".image--touch .image__overlay-content").css("display","none");
+		$(".image--touch").click(function() {
+			$(".image--touch .image__overlay-content").css("display","none");
+			$(this).children(".image__overlay-content").fadeIn();
+		});
+	};
+};
+
+	
+
+
 	$(".spincrement").css("visibility","hidden")
 	$(".spincrement--main").css("visibility","hidden")
 	var waypoint = new Waypoint({

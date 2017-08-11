@@ -1,4 +1,24 @@
-$(function() {
+$(document).ready(function() {
+	$(".spincrement").css("visibility","hidden")
+	$(".spincrement--main").css("visibility","hidden")
+	var waypoint = new Waypoint({
+  		element: $("#numbers"),
+		handler: function(direction) {
+			$(".spincrement").css("visibility","visible")
+			$(".spincrement--main").css("visibility","visible")
+			$(".spincrement--main").spincrement({
+				duration: 6000,
+				complete: $(".inline-item__heading").removeClass("spincrement--main"),
+			});
+			$(".spincrement").spincrement({
+				duration: 2000,
+				leeway: 50,
+				complete: $(".inline-item__heading").removeClass("spincrement"),
+			});
+		}, offset: 300
+	});
+		
+
 	$(".tabs__image").eq(0).addClass("active");
 	$(".tab").eq(0).addClass("active");
 	$(".tab__text").eq(0).css("display","block");
@@ -21,8 +41,8 @@ $(function() {
 			
 
 	});
-
-	$(".spincrement").spincrement();
+	
+	
 
 	var currentIndex = 0;// store current pane index displayed
 	var ePanes = $('.hd-slider__panel'), // store panes collection

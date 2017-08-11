@@ -1,1 +1,1 @@
-[DEMO](https://ivadimko.github.io/Template-MoGo.git)
+[DEMO](https://ivadimko.github.io/Template-MoGo)

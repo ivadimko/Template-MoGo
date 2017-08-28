@@ -1,6 +1,6 @@
 /* =========== HEADER STYLES =========== */			
 .header
-	min-height: 410px
+	position: relative
 	height: 100vh
 	@extend .gradient-overlay
 	&::before
@@ -21,6 +21,7 @@
 		margin: 0
 		color: $white
 		text-transform: none
+		transition: color .2s ease
 		&:hover
 			color: #fce38a
 	&__nav
@@ -29,7 +30,7 @@
 		padding: 0
 	&__icons
 		margin-left: 20px
-.cd-primary-nav		
+.header__nav	
 	margin-left: auto
 .nav__item
 	display: inline-block
@@ -47,6 +48,7 @@
 
 .nav-item
 	&__link
+		transition: color .2s ease
 	&__underline
 		display: inline-block
 		height: 3px
@@ -56,81 +58,6 @@
 		bottom: -10px
 		left: 0
 		transition: width .2s ease
-.nav-trigger //burger for mobile devices
-	position: absolute
-	top: 73px
-	right: 140px
-	-webkit-transform: translateY(-50%)
-	-ms-transform: translateY(-50%)
-	transform: translateY(-50%)
-	display: table
-	height: 60px
-	padding: 0 1em
-	font-size: 1.2rem
-	text-transform: uppercase
-	
-	span
-		display: table-cell
-		vertical-align: middle
-	em
-		display: block
-		position: relative
-		height: 2px
-		width: 24px
-		background-color: $white
-		-webkit-backface-visibility: hidden
-		backface-visibility: hidden
-		&::after
-			display: block
-			position: relative
-			height: 2px
-			width: 24px
-			background-color: $white
-			-webkit-backface-visibility: hidden
-			backface-visibility: hidden
-		&::before
-			display: block
-			position: relative
-			height: 2px
-			width: 24px
-			background-color: $white
-			-webkit-backface-visibility: hidden
-			backface-visibility: hidden
-			position: absolute
-			content: ''
-			left: 0
-			-webkit-transition: -webkit-transform .5s
-			transition: -webkit-transform .5s
-			transition: transform .5s
-			transition: transform .5s, -webkit-transform .5s
-		-webkit-transition: background-color .5s
-		transition: background-color .5s
-		&::after
-			position: absolute
-			content: ''
-			left: 0
-			-webkit-transition: -webkit-transform .5s
-			transition: -webkit-transform .5s
-			transition: transform .5s
-			transition: transform .5s, -webkit-transform .5s
-		&::before
-			-webkit-transform: translateY(-8px)
-			-ms-transform: translateY(-8px)
-			transform: translateY(-8px)
-		&::after
-			-webkit-transform: translateY(8px)
-			-ms-transform: translateY(8px)
-			transform: translateY(8px)
-	&.on em
-		background-color: rgba(255, 255, 255, 0)
-		&::before
-			-webkit-transform: rotate(-45deg)
-			-ms-transform: rotate(-45deg)
-			transform: rotate(-45deg)
-		&::after
-			-webkit-transform: rotate(45deg)
-			-ms-transform: rotate(45deg)
-			transform: rotate(45deg)
 /* =========== HEADER's BACKGROUND SLIDER =========== */
 #hd-slider
 	position: absolute
@@ -144,6 +71,8 @@
 	height: 100%
 	width: 100%
 	display: none
+	background-size: cover
+	background-position: top center
 	&:first-child
 		display: block
 	img
@@ -231,6 +160,7 @@
 		margin: 6vh auto
 		padding: 5px 0
 		border: 3px solid $white
+		transition: all .2s ease
 		&:hover
 			color: #fce38a
 			border-color: #fce38a

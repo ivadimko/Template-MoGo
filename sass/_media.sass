@@ -23,7 +23,7 @@
 	
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
+@media only screen and (max-width : 991px)
 	.top-line__icons
 		margin-right: 20px
 	.awards
@@ -32,13 +32,8 @@
 		font-size: 14px
 		strong
 			font-size: 16px
-	.cd-primary-nav
+	.header__nav
 		display: none
-		position: absolute
-		right: 10px
-		top: 80px
-		width: 20%
-		z-index: 10
 	.nav__link
 		margin: 15px 0
 		display: block
@@ -237,14 +232,12 @@
 		font-size: 40px !important
 	.hd-headers__subheading
 		font-size: 20px !important
-	.cd-primary-nav
-		width: calc(100% + 50px)
-		right: 50%
-		transform: translate(50%)
-		text-align: center
-		color: $black
-		text-shadow: 0 0 20px $black
-		+linear-gradient(transparent, #fce38a)
+	.mobile-nav__menu
+		padding-left: 0
+		padding-top: 3rem
+		li
+			font-size: 2rem
+			margin-bottom: 1.5rem
 	.hd-slider__progress-bar
 		height: 10px
 	.hd-slider-nav__item
@@ -289,6 +282,8 @@
 		border-right: 1px solid #e7e7e7
 	.reviews__item--sm-item
 		padding: 20px 10px
+	.top-line__logo
+		padding-top: 6px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -299,7 +294,8 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px)
-	/**/
+	.header
+		min-height: 360px
 
 
 /* Extra Small Devices, Phones */
@@ -309,18 +305,18 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)
-	/**/
+	.header
+		min-height: 420px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
-	.nav-trigger
+	.header__burger
 		display: none
-	.cd-primary-nav
-		display: block !important
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.header
+		min-height: 550px
 

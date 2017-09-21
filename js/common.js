@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	$('.nav-item__link').click(function(){
+			var link = $(this).attr('href');
+      $('html, body').animate({scrollTop:$(link).position().top}, 1000);
+	});
 
 	if ($(document).width() > 767) {
 		if(!!('ontouchstart' in window)){//check for touch device
@@ -19,12 +23,12 @@ $(document).ready(function() {
 			$(".spincrement--main").css("visibility","visible")
 			$(".spincrement--main").spincrement({
 				duration: 6000,
-				complete: $(".inline-item__heading").removeClass("spincrement--main"),
+				complete: function() {$(".inline-item__heading").removeClass("spincrement--main")},
 			});
 			$(".spincrement").spincrement({
 				duration: 2000,
 				leeway: 50,
-				complete: $(".inline-item__heading").removeClass("spincrement"),
+				complete: function() {$(".inline-item__heading").removeClass("spincrement")},
 			});
 		}, offset: 300
 	});
